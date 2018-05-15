@@ -3,10 +3,10 @@ import { Provider } from 'react-redux';
 import makeStore from './store/configureStore';
 
 //Components
-import ContextualSidebar from './components/ContextualSidebar';
 import Nav from './components/Nav';
-import VacationInfo from './components/VacationInfo';
-import  VacationTime from './components/VacationTime';
+import LeftSidebar from './components/LeftSidebar';
+import RightSidebar from './components/RightSidebar';
+import MainArea from './components/MainArea';
 
 const store = makeStore();
 
@@ -19,9 +19,9 @@ class App extends Component {
             <Nav />
           </nav>
           <main>
-            <VacationInfo />
-            <VacationTime />
-            <ContextualSidebar />
+            <LeftSidebar />
+            <MainArea />
+            <RightSidebar />
           </main>
         </div>
       </Provider>
