@@ -1,5 +1,38 @@
-body {
+body, html, #root {
+  height: 100%;
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+}
+.view-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+nav {
+  height: 50px;
+  padding: 20px;
+  border-bottom: 1px solid #ccc;
+}
+main {
+  height: calc(100% - 70px);
+  display: flex;
+  align-items: stretch;
+}
+main div {
+  padding: 20px;
+  height: 100%;
+  border-right: 1px solid #ccc;
+}
+main div:last-child {
+  border: none;
+}
+.vacation-info {
+  width: 200px;
+}
+.vacation-time {
+  width: calc(100% - 600px);
+}
+.contextual-sidebar {
+  width: 400px;
 }

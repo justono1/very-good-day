@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
 import { Provider } from 'react-redux';
 import makeStore from './store/configureStore';
-import logo from './logo.svg';
 import './App.css';
+
+//Components
+import ContextualSidebar from './components/ContextualSidebar';
+import Nav from './components/Nav';
+import VacationInfo from './components/VacationInfo';
+import  VacationTime from './components/VacationTime';
 
 const store = makeStore();
 
@@ -10,15 +15,15 @@ class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <div className="App">
-          <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <h1 className="App-title">Welcome to React</h1>
-          </header>
-          
-          <p className="App-intro">
-            To get started, edit <code>src/App.js</code> and save to reload blah.
-          </p>
+        <div className="view-container">
+          <nav className="nav-bar">
+            <Nav />
+          </nav>
+          <main>
+            <VacationInfo />
+            <VacationTime />
+            <ContextualSidebar />
+          </main>
         </div>
       </Provider>
     );
