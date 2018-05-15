@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Provider } from 'react-redux';
 import makeStore from './store/configureStore';
-import './App.css';
 
 //Components
 import ContextualSidebar from './components/ContextualSidebar';

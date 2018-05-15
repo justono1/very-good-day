@@ -18,14 +18,14 @@ main {
   height: calc(100% - 70px);
   display: flex;
   align-items: stretch;
-}
-main div {
-  padding: 20px;
-  height: 100%;
-  border-right: 1px solid #ccc;
-}
-main div:last-child {
-  border: none;
+  div {
+    padding: 20px;
+    height: 100%;
+    border-right: 1px solid #ccc;
+    &:last-child {
+      border: none;
+    }
+  }
 }
 .vacation-info {
   width: 200px;
