@@ -36,16 +36,22 @@ main {
   box-sizing: border-box;
 }
 .main-area {
-  width: calc(100% - 650px);
+  width: calc(100% - 550px);
   box-sizing: border-box;
   overflow: hidden;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
+  @media screen and (min-width: 1050px) {
+    width: calc(100% - 650px);
+  }
 }
 .right-sidebar {
   background: #FAFAFA;
-  width: 450px;
+  width: 350px;
   box-sizing: border-box;
+  @media screen and (min-width: 1050px) {
+    width: 450px;
+  }
 }
 
 //Nav
