@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
+import { connect } from "react-redux";
 
 class VacationInfo extends Component {
   render() {
+    let {vacationInfo} = this.props;
     return (
       <div className="vacation-info">
         <div>
           <p>Days Remaining</p>
-          <h1>11</h1>
+          <h1>{vacationInfo.timeRemaining}</h1>
           <ul className="no-bullets">
-            <li>Requested: 1</li>
-            <li>Accepted: 4</li>
+            <li>Requested: {vacationInfo.timePending}</li>
+            <li>Accepted: {vacationInfo.timeApproved}</li>
           </ul>
         </div>
         <div>
@@ -31,4 +33,10 @@ class VacationInfo extends Component {
   }
 }
 
-export default VacationInfo;
+const mapStateToProps = (state) => ({
+  vacationInfo: state.vacationInfo
+})
+
+export default connect(
+  mapStateToProps
+)(VacationInfo);
