@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import moment from 'moment';
+import { DatePicker } from 'rc-datepicker';
 
 //assets
 import rightArrow from './icons/arrow-right.svg';
@@ -9,7 +10,9 @@ class RequestTime extends Component {
     super(props);
     this.state = {
       startDateOpen: false,
-      endDateOpen: false
+      endDateOpen: false,
+      dateStart: moment(),
+      dateEnd: moment()
     }
 
     this.openStartDate = this.openStartDate.bind(this);
@@ -48,29 +51,29 @@ class RequestTime extends Component {
           <div className="padding-container text-right">
             <label>
               All Day
-              <input type="checkbox" name="allDay" checked />
+              <input type="checkbox" name="allDay" checked={true} />
             </label>
           </div>
 
           <div className="calendar accordion-group">
             <div className="accordion-item">
               <div className="accordion-title" onClick={this.openStartDate}>
-                {moment().format('dddd, MMMM D YYYY')}
+                {moment(this.state.dateStart).format('dddd, MMMM D YYYY')}
                 <img src={rightArrow} alt="right arrow" className={this.state.startDateOpen ? 'accordion-active': ''} />
               </div>
               
               <div className={startClass.join(' ')}>
-                <p>thiasdfa sdf as dfasdf as d fasdfasdfa sdfasdf as dfasdf as df asdf</p>
+                <DatePicker value={this.state.dateStart} onChange={(date) => this.setState({dateStart: date})} />
               </div>
             </div>
             <div className="accordion-item">
               <div className="accordion-title" onClick={this.openEndDate}>
-                {moment().format('dddd, MMMM D YYYY')}
+                {moment(this.state.dateEnd).format('dddd, MMMM D YYYY')}
                 <img src={rightArrow} alt="right arrow" className={this.state.endDateOpen ? 'accordion-active': ''} />
               </div>
               
               <div className={endClass.join(' ')}>
-                <p>thiasdfa sdf as dfasdf as d fasdfasdfa sdfasdf as dfasdf as df asdf</p>
+                <DatePicker value={this.state.dateEnd} onChange={(date) => this.setState({dateEnd: date})} />
               </div>
             </div>
           </div>
