@@ -46,6 +46,7 @@ main {
   }
 }
 .right-sidebar {
+  padding: 0;
   background: #FAFAFA;
   width: 350px;
   box-sizing: border-box;
@@ -53,6 +54,13 @@ main {
     width: 450px;
   }
 }
+
+.padding-container {
+  padding: 2rem;
+}
+
+//modules
+@import 'modules/accordions';
 
 //Nav
 @import 'components/Nav';

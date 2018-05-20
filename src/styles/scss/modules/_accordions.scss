@@ -1,0 +1,36 @@
+.accordion-group {
+  .accordion-item {
+    position: relative;
+    padding: 20px;
+    cursor: pointer;
+    border-bottom: 1px solid #D8D8D8;
+    &:first-child {
+      border-top: 1px solid #D8D8D8;
+    }
+  }
+  .accordion-title {
+    width: 100%;
+    font-size: 1.4rem;
+    color: #BBBDBF;
+    img {
+      position: absolute;
+      top: 1.8rem;
+      right: 2rem;
+      transition: 300ms linear;
+      &.accordion-active {
+        transform: rotate(90deg);
+      }
+    }
+  }
+  .accordion-content {
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: height 300ms 300ms, opacity 300ms 0ms;
+    &.show-accordion {
+      height: 30px;
+      opacity: 1;
+      transition: height 300ms 0ms, opacity 300ms 300ms;
+    }
+  }
+}

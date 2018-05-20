@@ -19,14 +19,14 @@ if(process.env.NODE_ENV === 'development') {
       avatar: "path to asset"
     },
     vacationInfo: {
-      timeRemaining: 220, //hours
-      timePending: 8, //hours (virtual state)
-      timeApproved: 8, //hours (virtual state)
-      timeAccrumentDate: "Mon Janurary 1 2018 00:00:00 GMT-0400 (EDT)",
-      timeExpireDate: "Tue January 1 2019 00:00:00 GMT-0400 (EDT)",
-      timeAccrumentAmount: 228, //hours
-      timeCap: 220, //hours
-      timeWillExpire: 8, //hours (virtual state)
+      timeRemaining: 820800, //seconds
+      timePending: 28800, //seconds (virtual state)
+      timeApproved: 28800, //seonds (virtual state)
+      timeAccrumentDate: "Mon Janurary 1 2018 01:00:00 GMT-0400 (EDT)",
+      timeExpireDate: "Tue January 1 2019 01:00:00 GMT-0400 (EDT)",
+      timeAccrumentAmount: 792000, //seconds
+      timeCap: 792000, //seconds
+      timeWillExpire: 28800, //seconds (virtual state)
     },
     vacationTime: [
       {
@@ -35,8 +35,8 @@ if(process.env.NODE_ENV === 'development') {
         dates: [
           {
             dateRequested: "Fri May 18 2018 13:00:00 GMT-0400 (EDT)",
-            dateStart: "Mon June 11 2018 00:00:00 GMT-0400 (EDT)",
-            dateEnd: "Wed June 13 2018 24:00:00 GMT-0400 (EDT)",
+            dateStart: "Mon June 11 2018 01:00:00 GMT-0400 (EDT)",
+            dateEnd: "Wed June 13 2018 23:59:59 GMT-0400 (EDT)",
             status: "Approved", //Requested Denied
             messages: [
               {
@@ -67,7 +67,7 @@ if(process.env.NODE_ENV === 'development') {
           },
           {
             dateRequested: "Fri May 18 2018 13:15:00 GMT-0400 (EDT)",
-            dateStart: "Fri June 15 2018 00:00:00 GMT-0400 (EDT)",
+            dateStart: "Fri June 15 2018 01:00:00 GMT-0400 (EDT)",
             dateEnd: "Fri June 15 2018 24:00:00 GMT-0400 (EDT)",
             status: "Approved", //Requested Denied
             messages: [
@@ -104,8 +104,8 @@ if(process.env.NODE_ENV === 'development') {
       vacationAccurmentTerm: 'annually',
       comapnyClosed: [
         {
-          dateStart: "Mon May 28 2018 00:00:00 GMT-0400 (EDT)",
-          dateEnd: "Mon May 28 2018 24:00:00 GMT-0400 (EDT)",
+          dateStart: "Mon May 28 2018 01:00:00 GMT-0400 (EDT)",
+          dateEnd: "Mon May 28 2018 23:59:59 GMT-0400 (EDT)",
         }
       ]
     }
