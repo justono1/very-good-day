@@ -41,10 +41,38 @@ p, li, input, label {
     }
   }
 }
+input, textarea {
+  width: 100%;
+  font-size: 1.4rem;
+  padding: 1rem;
+  box-sizing: border-box;
+  border-color: #B7BBC0;
+  color: #B7BBC0;
+}
+textarea {
+  min-height: 15rem;
+}
 label {
   font-weight: bold;
   input[type='checkbox'] {
+    width: auto;
     margin-left: 1rem;
+  }
+}
+button {
+  outline: none;
+  border-radius: 0;
+  border: 1px solid #B7BBC0;
+  color: #B7BBC0;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.4rem;
+  padding: 1.5rem 2rem;
+  background: #fff;
+  transition: .3s linear;
+  &:hover {
+    background: #000;
+    color: #fff;
   }
 }
 .text-right {
